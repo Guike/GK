@@ -1,0 +1,66 @@
+<style media="screen">
+    .slider {
+        height: 200px;
+    }
+    .slider img{
+      width: 100%;
+    }
+    .accordion-heading .accordion-toggle {
+      display: block;
+      padding: 8px 15px;
+    }
+</style>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-slide-box active-slide="myActiveSlide" auto-play="true">
+                <ion-slide>
+                    <img src="/images/图1.jpg" alt="1" />
+                </ion-slide>
+                <ion-slide>
+                    <img src="/images/TMC联创.jpg" alt="2" />
+                </ion-slide>
+                <ion-slide>
+                    <img src="/images/TMC联创公益关系.jpg" alt="3" />
+                </ion-slide>
+            </ion-slide-box>
+        </ion-item>
+        <ion-item>
+          <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <p style="letter-spacing:8px;color:green;font-weight:bold;" class="text-center">
+                      公益说明
+                    </p>
+                    <p style="letter-spacing:8px;" class="text-center">
+                      宗旨： 联创公益，共谋健康
+                    </p>
+                      <a style="letter-spacing:8px;color:green;" class="text-right accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="/#collapseOne">
+                        点击展开全文
+                      </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+                      <div class="accordion-inner">
+                          <p class="text-center" style="letter-spacing:2px;">
+                              使命： 致力构建健康生活解决方案
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-slide-box active-slide="myActiveSlide" auto-play="true">
+              <ion-slide>
+                  <img src="/images/TMC联创.jpg" alt="1" />
+              </ion-slide>
+              <ion-slide>
+                  <img src="/images/图1.jpg" alt="2" />
+              </ion-slide>
+              <ion-slide>
+                  <img src="/images/TMC联创公益关系.jpg" alt="3" />
+              </ion-slide>
+          </ion-slide-box>
+        </ion-item>
+    </ion-list>
+</ion-content>

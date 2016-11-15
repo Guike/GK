@@ -1,0 +1,52 @@
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <h1>个人接力</h1>
+        </ion-item>
+        <div class="list">
+            <label class="item item-input">
+              <span class="input-label">姓名</span>
+                <input type="text" id="name">
+            </label>
+        </div>
+        <ion-list>
+            <ion-radio ng-model="gender" ng-value="male">男</ion-radio>
+            <ion-radio ng-model="gender" ng-value="female">女</ion-radio>
+        </ion-list>
+        <div class="list">
+            <label class="item item-input">
+              <span class="input-label">出生日期</span>
+                <input type="date" value="2016-10-31"/>
+            </label>
+        </div>
+        <div class="list">
+            <label class="item item-input">
+            <span class="input-label">居住地</span>
+          </label>
+            <div> <select class="form-control" ng-model="province" ng-options="key as key for (key,value) in division" ng-change="city='';district='';">
+                <option value="">省</option>
+            </select>
+            </div>
+            <div>
+                <select class="form-control" ng-model="city" ng-options="key as key for (key,value) in division[province]" ng-change="district='';">
+                <option value="">市</option>
+            </select>
+            </div>
+            <div>
+                <select class="form-control" ng-model="district" ng-options="value  as value for value in division[province][city]">
+                <option value="">区</option>
+            </select>
+            </div>
+        </div>
+        <div class="list">
+            <label class="item item-input">
+            <span class="input-label">手机号码</span>
+              <input type="text">
+          </label>
+        </div>
+
+        <button class="button button-full button-balanced" ng-click="personSubmit()">
+          点击提交，开始接力
+        </button>
+    </ion-list>
+</ion-content>
