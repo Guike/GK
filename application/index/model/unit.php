@@ -1,7 +1,7 @@
 <?php
 namespace app\index\model;
 use think\Model;
-class unit extends Model
+class Unit extends Model
 {
 	protected $table = 'unitTable';
 
@@ -16,7 +16,7 @@ class unit extends Model
     	// 数据库用户名
     	'username' => 'register',
    	 	// 数据库密码
-    	'password' => '875788',
+    	'password' => 'D*&%&**()%123yh',
     	// 数据库连接端口
     	'hostport' => '',
     	// 数据库连接参数
