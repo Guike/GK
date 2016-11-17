@@ -229,24 +229,20 @@ return [
         'list_rows' => 15,
     ],
 
-    'db_config1'			 => [
-    	// 数据库类型
-    	'type'     => 'mysql',
-    	// 服务器地址
-    	'hostname' => 'localhost',
-    	// 数据库名
-    	'database' => 'PersonAndUnitInfo',
-    	// 数据库用户名
-    	'username' => 'register',
-   	 	// 数据库密码
-    	'password' => '875788',
-    	// 数据库连接端口
-    	'hostport' => '',
-    	// 数据库连接参数
-   	 	'params'   => [],
-    	// 数据库编码默认采用utf8
-    	'charset'  => 'gbk',
-    	// 数据库表前缀
-    	'prefix'   => '',
+    'captcha'  => [
+        // 验证码字符集合
+        'codeSet'  => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY', 
+        // 验证码字体大小(px)
+        'fontSize' => 25, 
+        // 是否画混淆曲线
+        'useCurve' => true, 
+         // 验证码图片高度
+        'imageH'   => 70,
+        // 验证码图片宽度
+        'imageW'   => 235, 
+        // 验证码位数
+        'length'   => 5, 
+        // 验证成功后是否重置        
+        'reset'    => true
 	]
 ];

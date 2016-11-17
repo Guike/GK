@@ -1,15 +1,12 @@
 <html>  
-<head>  
-<script type="text/javascript" src="/js/a.js"></script>  
-<script  type="text/javascript">  
-    window.onload = function(){  
-    var fun = abc; //引用abc函数  
-    fun(123);  
-    };  
-      
- </script>  
-</head>  
-  
-<body>  
+<body>
+	<form action="/index.php/index/Test/Verify" method="post">
+        验证码：<br/>
+        <input type="text" name="code" size="16"/>
+        <br/>
+        <img id="captcha_img" name="code" onclick="this.src='{:captcha_src()}?d='+Math.random();" alt="点击更换" title="点击更换" src="{:captcha_src()}" class="m">
+        <input type="submit" name="submit" value="提交"/>
+    </form>
+	
 </body>  
 </html>  
